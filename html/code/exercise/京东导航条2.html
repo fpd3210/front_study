@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <title>Document</title>
+    <style>
+        body{
+            /* 设置背景颜色 */
+            background-color: #bfa;
+        }
+        #menu_left{
+            background-color: #fff;
+            margin: 50px auto;
+            width: 190px;
+            height: 470px;
+            padding: 10px 0;
+        }
+
+        #menu_left .item{
+            height: 25px;
+              /* 要让一个文字在父元素中垂直居中，只需将父元素的line-height设置为一个和父元素height一样的值 */
+            line-height: 25px;
+            padding-left: 18px;
+        }
+
+        #menu_left .item:hover{
+            /* 设置鼠标移入时的背景颜色  */
+            background-color: #d9d9d9;
+        }
+
+        .item a{
+            /* 设置字体大小 */
+            font-size: 14px;
+            /* 设置字体的颜色 */
+            color: #333;
+            /* 去除下划线 */
+            text-decoration: none;
+        }
+
+        .item a:hover{
+            /* 设置鼠标移入时a标签字体颜色  */
+            color: #c81623;    
+        }
+        .cate_menu_line{
+            padding: 0 2px;
+            font-size: 12px;
+        }
+
+
+    
+        
+    </style>
+</head>
+
+<body>
+
+    <nav id="menu_left">
+        <div class="item">
+            <a href="#">家用电器</a>
+        </div>
+        <div class="item">
+            <a href="#">手机</a><span class="cate_menu_line">/</span><a href="#">运营商</a><span class="cate_menu_line">/</span><a href="#">数码</a>
+        </div>
+        <div class="item">
+            <a href="#">电脑</a><span class="cate_menu_line">/</span><a href="#">办公</a>
+        </div>
+        <div class="item">
+            <a href="#">家居</a><span class="cate_menu_line">/</span><a href="#">家具</a><span class="cate_menu_line">/</span><a href="#">家装</a><span class="cate_menu_line">/</span><a href="#">厨具</a>
+        </div>
+        <div class="item">
+            <a href="#">男装</a><span class="cate_menu_line">/</span><a href="#">女装</a><span class="cate_menu_line">/</span><a href="#">童装</a><span class="cate_menu_line">/</span><a href="#">内衣</a>
+        </div>
+    </nav>
+
+
+</body>
+
+</html>

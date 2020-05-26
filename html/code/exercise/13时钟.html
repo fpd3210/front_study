@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        .clock{
+            width: 500px;
+            height: 500px;
+            /* background-color: #bfa; */
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+            background-image: url("./img/13/bg.png");
+            background-size: cover;
+        }
+
+
+        .clock > div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+         /* 设置时针 */
+        .hour-wrapper{
+            height: 50%;
+            width: 50%;
+            /* background-color: red; */
+            animation: run 43200s;
+        }
+        .hour{
+            background-color: black;  
+            height: 50%;
+            width: 6px;
+            margin: 0 auto;  
+        }
+
+        /* 设置分针 */
+        .min-wrapper{
+            height: 70%;
+            width: 70%;
+            /* background-color: red; */
+            animation: run 3600s steps(60);
+        }
+        .min{
+            background-color: black;  
+            height: 50%;
+            width: 4px;
+            margin: 0 auto;  
+        }
+
+        /* 设置秒针 */
+        .sec-wrapper{
+            height: 90%;
+            width: 70%;
+            /* background-color: red; */
+            /* animation: run 10s infinite; */
+            animation-name: run;
+            animation-duration: 60s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(60);
+        }
+        .sec{
+            background-color: red;  
+            height: 50%;
+            width: 2px;
+            margin: 0 auto;  
+        }
+
+
+        @keyframes run {
+            to{
+                transform: rotateZ(1turn);
+            }
+            form{
+                transform: rotateZ(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="box">
+        <div class="box1">
+        </div>
+    </div> -->
+    
+
+   <!-- 创建表的容器 -->
+   <div class="clock">
+    <!-- 创建时针 -->
+    <div class="hour-wrapper">
+        <div class="hour"></div>
+    </div>
+
+    <!-- 创建分针 -->
+    <div class="min-wrapper">
+        <div class="min"></div>
+    </div>
+
+    <!-- 创建秒针 -->
+    <div class="sec-wrapper">
+        <div class="sec"></div>
+    </div>
+
+</div>
+
+</body>
+</html>

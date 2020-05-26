@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- 引入重置样式表 -->
+     <link rel="stylesheet" href="./css/reset.css">
+     <!-- 引用图标字体 -->
+     <link rel="stylesheet" href="./fa/css/all.css">
+     <style>
+          /* 设置外层容器 */
+        .outer{
+            width: 240px;
+            margin: 100px auto;
+            /* 设置阴影 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        }
+
+        /* 设置内容区样式 */
+        .content{
+            margin-left: 19px;
+            color: #717171;
+            margin: 18px 0 18px 19px;
+        }
+
+        .img-wrapper{
+            /* border: 1px solid red; */
+            vertical-align: bottom;
+        }
+
+        /* 设置标题样式 */
+        .title{
+            font-size: 18px;
+            margin: 13px 0;
+        }
+
+
+        .type_name{
+            margin-left: 6px;
+        }
+
+        /*  */
+        .type{
+            margin: 20px 0;
+        }
+
+        .info{
+            font-size: 13px;
+            line-height: 20px;
+        }
+
+        .star-wrapper{
+            border-top: 1px solid #e9e9e9;
+            height: 46px;
+            line-height: 46px;
+            margin: 0 16px;
+        }
+        .star{
+            float: left;
+        }
+
+        .fa-star{
+            color: #717171;
+        }
+
+        .star-wrapper .light{
+            color: #b9cb41;
+        }
+
+        .weibo{
+            float: right;
+        }
+     </style>
+</head>
+<body>
+    <!-- 创建外部容器 -->
+    <div class="outer">
+        <!-- 创建图片容器 -->
+        <div class="img-wrapper">
+            <img src="./img/09/1.jpg" alt="">
+        </div>
+        <!-- 创建中间内容容器 -->
+        <div class="content">
+            <!-- 标题 -->
+            <h1 class="title">Animation films</h1>
+            <!-- 类型 -->
+            <div class="type">
+                <i class="fas fa-map-marker-alt"></i>
+                <span class="type_name">Animations</span>
+            </div>
+            <!-- 相关信息 -->
+            <div class="info">
+                这是一部经典电影，电影拍摄于2010年，由xxx著名导演拍摄。
+            </div>
+        </div>
+        <!-- 创建底部容器 -->
+        <div class="star-wrapper">
+           <!-- 创建星星 -->
+           <ul class="star">
+                <li class="fas fa-star light"></li>
+                <li class="fas fa-star light"></li>
+                <li class="fas fa-star"></li>
+                <li class="fas fa-star"></li>
+            </ul>
+
+            <!-- 创建 -->
+            <ul class="weibo">
+                <li class="fab fa-weibo"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

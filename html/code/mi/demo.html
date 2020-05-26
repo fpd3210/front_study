@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- 引入除去默认样式 -->
+      <link rel="stylesheet" href="./css/reset.css">
+      <!-- 引入公共样式 -->
+      <link rel="stylesheet" href="./css/base.css">    
+    <style>
+        .box1{
+           width: 0;height: 0;
+           border: 10px solid;
+           border-color: red transparent green transparent;
+            border-top: none;
+        }
+
+        .box2{
+            
+            background-color: #bbffaa;
+        }
+
+        .box3{
+            float: left;
+            height: 100px;
+            width: 300px;
+          
+            background-color: blue;
+           
+        }
+        .box4{
+           
+            float: left;
+            height: 55px;
+            width: 55px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+
+    <hr>
+    <div class="box2">
+        <div class="box3 clearfix">
+            <div class="box4">
+                <img src="./img/mi-home.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

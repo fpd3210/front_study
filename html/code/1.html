@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+    <style>
+        #one  div{
+            color: red;
+        }
+        .box > p + span{
+            color: salmon;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div id="one">
+        <div>one_1</div>
+        <div>one_2</div>
+        <span>one_3</span>
+    </div>
+    <div id="two">two</div>
+    <div id="three">three</div>
+
+    <div class="box">
+        我是一个div
+        <span>我是div中的span元素</span>
+        <p>
+            我是div中的p元素
+            <span>我是p元素中的span</span>
+        </p>
+        <span>我是div中的span元素111</span>
+        <div></div>
+        <span>我是div中的span元素</span>
+        <span>我是div中的span元素</span>
+        <span>我是div中的span元素</span>
+        <span>我是div中的span元素</span>
+    
+        </div>
+    
+        <span>
+            我是div外的span
+        </span>
+    </div>
+       <table>
+           <tr>
+               <td></td>
+               <td></td>
+           </tr>
+           <tr>
+                <td ></td>
+            </tr>
+       </table>
+       <form action="">
+            文本框 <input type="text" name="username">
+            密码框 <input type="password" name="password">
+
+             <!--
+             单选按钮
+                - 像这种选择框，必须要指定一个value属性，value属性最终会作为用户的填写的值传递给服务器
+                - checked 可以将单选按钮设置为默认选中
+            -->
+            单选按钮 <input type="radio" name="hello" value="a">
+            <input type="radio" name="hello" value="b" checked>
+
+            多选框 <input type="checkbox" name="test" value="1">
+            <input type="checkbox" name="test" value="2">
+            <input type="checkbox" name="test" value="3" checked>
+
+             <!-- 下拉列表 -->
+            <select name="haha">
+                <option value="i">选项一</option>
+                <option selected value="ii">选项二</option>
+                <option value="iii">选项三</option>
+            </select>
+
+            <!-- 提交按钮 -->
+            <input type="submit" value="注册">
+
+            <!-- autocomplete="off" 关闭自动补全
+            readonly 将表单项设置为只读，数据会提交
+            disabled 将表单项设置为禁用，数据不会提交
+            autofocus 设置表单项自动获取焦点 -->
+        </form>
+</body>
+</html>

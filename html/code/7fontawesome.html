@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fa/css/all.css">
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <style>
+        li{
+            list-style: none;
+        }
+        li::before{
+            /* 
+                通过伪元素来设置图标字体
+                    1.找到要设置图标的元素通过before或after选中
+                    2.在content中设置字体的编码
+                    3.设置字体的样式
+                        fab
+                        font-family: 'Font Awesome 5 Brands';
+
+                        fas
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900; 
+
+            */
+            content: '\f1b0';
+            /* font-family: 'Font Awesome 5 Brands'; */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900; 
+            color: blue;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <!-- <hr>
+<i class="fa fa-apple fa-5x"></i>
+<hr>
+<i class="fa fa-camera-retro fa-lg"></i> fa-lg
+<i class="fa fa-camera-retro fa-2x"></i> fa-2x
+<i class="fa fa-camera-retro fa-3x"></i> fa-3x
+<i class="fa fa-camera-retro fa-4x"></i> fa-4x
+<i class="fa fa-camera-retro fa-5x"></i> fa-5x -->
+
+
+<ul>
+    <li>锄禾日当午</li>
+    <li>汗滴禾下土</li>
+    <li>谁知盘中餐</li>
+    <li>粒粒皆辛苦</li>
+</ul>
+
+</body>
+</html>

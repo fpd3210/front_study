@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 800px;
+            height: 800px;
+            background-color: #bbffaa;
+        }
+
+        .box1 .box2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-left: 0;
+            transition: all 2s;
+        }
+
+        .box1 .box3{
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            background-color: burlywood;
+            margin-left: 0;
+            transition-property: initial;
+            transition-duration: 3s;
+            transition-timing-function: cubic-bezier(0,1.64,.85,-1.22);
+            transition-delay: 2s;
+        }
+
+        .box1:hover div{
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

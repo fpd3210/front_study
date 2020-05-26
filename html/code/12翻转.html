@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html{
+            /* 设置当前网页的视距为800px，人眼距离网页的距离 */
+            perspective: 800px;
+         }
+
+         body{
+    
+            border: 1px red solid;
+            background-color: rgb(241, 241, 241);
+        }
+
+        .box1{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: #bfa;
+            transition: 2s;
+        }
+        body:hover .box1{
+            /* transform: rotateZ(45deg); */
+            transform: rotateY(180deg);
+            /* transform: rotateX(180deg); */
+            /* transform: rotateZ(180deg); */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+        
+    </div>
+</body>
+</html>

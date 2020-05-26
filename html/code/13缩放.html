@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            height: 200px;
+            width: 200px;
+            background-color: #bbffaa;
+            margin: 100px auto;
+            transition:  .5s;
+        }
+
+        .box1:hover{
+            transform: scale(1.2);
+        }
+
+        .box2{
+            height: 320px;
+            width: 320px;
+            overflow: hidden;
+            margin: 100px auto;
+            transition:  .5s;
+        }
+
+        .box2:hover img{
+            transform: scale(1.2);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2">
+        <img src="./an.jpg" alt="">
+    </div>
+</body>
+</html>
