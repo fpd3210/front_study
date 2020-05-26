@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04_对象扩展</title>
+</head>
+<body>
+<!--
+1. Object.is(v1, v2)   //以字符串的形式
+  * 判断2个数据是否完全相等
+2. Object.assign(target, source1, source2..)
+  * 将源对象的属性复制到目标对象上
+3. 直接操作 __proto__ 属性
+  let obj2 = {};
+  obj2.__proto__ = obj1;
+-->
+
+<script type="text/javascript">
+    console.log(0==-1); //true
+    console.log(NaN==NaN);//false  //NaN和任何值都不相等
+    console.log(Object.is(0==-0)); //false
+    console.log(Object.is(NaN==NaN));//true
+
+    let obj = {};
+    let obj1 = {username:'kobe',age:39 };
+    let obj2 = {sex:'男'}
+    Object.assign(obj,obj1,obj2);
+    console.log(obj);
+
+
+    let obj3 = {money:50000000};
+    let obj4 = {};
+    obj4.__proto__=obj3;
+    console.log(obj4);
+    console.log(obj4.money);
+
+</script>
+</body>
+
+</html>

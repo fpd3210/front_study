@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>07_3点运算符</title>
+</head>
+<body>
+<!--
+* 用途
+1. rest(可变)参数
+    * 用来取代arguments 但比 arguments 灵活,只能是最后部分形参参数
+    function fun(...values) {
+        console.log(arguments);
+        arguments.forEach(function (item, index) {
+            console.log(item, index);
+        });
+        console.log(values);
+        values.forEach(function (item, index) {
+            console.log(item, index);
+        })
+    }
+    fun(1,2,3);
+2. 扩展运算符
+  let arr1 = [1,3,5];
+  let arr2 = [2,...arr1,6];
+  arr2.push(...arr1);
+-->
+<script type="text/javascript">
+    /*function foo(a,b) {
+        console.log(arguments);
+        //arguments.callee(); //相当于递归
+        //不能使用forEach
+    }*/
+    function foo(...values) {   //类似于Java中的不定参数
+        console.log(values);
+        values.forEach(function (item,index) {
+            console.log(item,index);
+        })
+
+    }
+    foo(67,2,88,66);
+
+    let arr = [1,6];
+    let arr1 = [2,3,4,5];
+
+    /*arr = [1,...arr1,6];  //字符串拼接
+    console.log(arr);*/
+    //arr1.push(...arr);  //往arr数组后面加值
+    arr1.pop(arr);  //取出arr数组最前面的值
+    console.log(arr);
+    console.log(arr1);
+
+</script>
+
+</body>
+</html>
