@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="test1"></div>
+<div id="test2"></div>
+
+<!-- 引入react核心库 -->
+<script src="../js/react.development.js"></script>
+<!-- 引入react-dom,用于支持react操作dom -->
+<script src="../js/react-dom.development.js"></script>
+<!-- 引入babel,用于将jsx转化为js -->
+<script src="../js/babel.min.js"></script>
+<!-- 引入prop-types,用于对组件属性进行限制-->
+<script src="../js/prop-types.js"></script>
+<script type="text/babel">
+
+    class Demo extends React.Component{
+
+        showData1= () =>{
+            console.log(this)
+            const input1 = this.input1
+            alert(input1.value)
+        }
+
+        showData2 = () =>{
+            const input2 = this.input2
+            alert(input2.value)
+        }
+
+
+        /*
+        ref的回调函数，参数就是当前节点
+        * */
+        render(){
+            return (
+                <div>
+                    <input ref={c=>this.input1 = c} type="text" placeholder="点击按钮弹框"/> &nbsp;
+                    <button onClick={this.showData1} >按钮</button> &nbsp;
+                    <input ref={c => this.input2 = c} onBlur={this.showData2} type="text" placeholder="失去焦点弹框"/>
+                </div>
+
+            )
+        }
+    }
+
+    ReactDOM.render(<Demo/>,document.getElementById("test1"))
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    let arr = [1,2,3,4,5,6]
+
+    console.log("-----指定函数处理数组的每个元素,返回新数组，原数组不变-----")
+    let arr1 = arr.map((value,index) => {
+        if(value>3){
+            return value
+        }
+    })
+
+
+    let arr10 = arr.map(function (value, index, array) {
+        return value+1
+    })
+
+    /**
+     * value 值(必须)
+     * index 数组下标
+     * array 当前数组
+     */
+    arr.map(((value, index, array) => {
+
+    }))
+    console.log(arr1,arr)
+
+    console.log("----遍历数组------")
+
+    arr.forEach(function (value, index, array) {
+        console.log(index,value)
+    })
+    arr.forEach((value,index)=>{
+        console.log(index,value)
+    })
+    arr.forEach(((value, index, array) => {
+
+    }))
+
+
+    console.log("-----过滤器，返回符合条件的元素-----")
+    let arr2 = arr.filter((value) => value>3)
+    arr.filter(((value, index, array) => {
+
+    }))
+    /*let arr22 = arr.filter(function (value) {
+        if(value>3){
+            return value
+        }
+    })*/
+
+    let arr22 = arr.filter(function (value,index,arr) {
+        return value>3
+    })
+
+    console.log(arr2,arr22,arr)
+
+
+    console.log("-----带变量去遍历数组-----")
+    let reduceArr = [1,2,3,3]
+
+    /**
+     * prev 中间变量
+     * cur 当前遍历的值
+     * arr 当前遍历的数组
+     * 0    prev的初始值
+     */
+    let sum = reduceArr.reduce(function (prev,cur,arr) {
+        return  prev +=cur
+    },0)
+    console.log("111",sum)
+
+    let total = reduceArr.reduce(((prev, cur) => prev+cur))
+
+    let reduceS = reduceArr.reduce(((previousValue, currentValue, currentIndex, array) => {
+        previousValue.indexOf(currentValue)==-1&&previousValue.push(currentValue)
+        return previousValue
+    }),[])
+    console.log(reduceS)
+    console.log(total)
+
+
+    console.log("----向数组末尾添加元素一个或多个元素------")
+    arr.push(7)
+    console.log(arr)
+
+
+    console.log("-----删除数组最后一个元素并返回元素-----")
+    let end =  arr.pop()
+    console.log(end)
+    console.log(arr)
+
+
+    console.log("-----向数组头部添加一个或多个元素-----")
+    arr.unshift(-1,0)
+    console.log(arr)
+
+    console.log("-----删除并返回数组第一个元素-----")
+    let first = arr.shift()
+    console.log(first)
+    console.log(arr)
+
+    console.log("-----合并一个或多个数组，往后添加，原数组不变-----")
+    let newArr = arr.concat([7,8],[9,10])
+    console.log(newArr)
+    console.log(arr)
+
+    console.log("-----将数组中所有元素拼接成一个字符串-----")
+    let str = arr.join()
+    let str2 = arr.join("-")
+    console.log(str,str2)
+
+
+    console.log("----------")
+    console.log("原数组",arr)
+   /* arr.sort(function (a,b) {
+        return b-a
+    })*/
+
+
+    let arr3 = arr.sort(((a, b) => b-a))
+    console.log("sort",arr3)
+    console.log("原数组",arr)
+    let peoples = [
+        {"name":"zs","age":5},
+        {"name":"ls","age":8},
+        {"name":"ww","age":12},
+        {"name":"tom","age":6},
+        {"name":"lw","age":17},
+    ]
+    let newPeoples =  peoples.sort((people1,people2)=>people1.age-people2.age)
+    console.log(newPeoples,peoples)
+
+    console.log("-----从数组中返回选定的元素  下标(start,end)-----")
+    let sliceArr = arr.slice(0,5)
+    console.log(sliceArr,arr)
+
+    console.log("-----从数组中删除并[添加元素]-----")
+    let splice = arr.splice(0,2)
+    //arr.slice(startIndex,num,addItem)
+    console.log(splice,arr)
+
+
+    arr = [1,2,3,4,5,2,3]
+    console.log(arr.lastIndexOf(2));
+    console.log(arr.indexOf(2));
+
+
+
+    /*
+        增加   push unshift  splice
+        删除   slice pop shift
+        修改   map filter
+        查看   forEach
+        排序   soft
+
+     */
+</script>
+
+</body>
+</html>

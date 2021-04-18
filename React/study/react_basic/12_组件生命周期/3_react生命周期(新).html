@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="test1"></div>
+
+<!-- 引入react核心库 -->
+<script src="../js/react.development.js"></script>
+<!-- 引入react-dom,用于支持react操作dom -->
+<script src="../js/react-dom.development.js"></script>
+<!-- 引入babel,用于将jsx转化为js -->
+<script src="../js/babel.min.js"></script>
+<!-- 引入prop-types,用于对组件属性进行限制-->
+<script src="../js/prop-types.js"></script>
+<script type="text/babel">
+
+    class Count extends React.Component {
+
+        state = ({count:0})
+
+        // 构造器
+        constructor(props) {
+            super(props);
+            console.log("Count---constructor")
+        }
+
+        add = ()=>{
+            const {count} = this.state
+            this.setState({count:count+1})
+        }
+
+
+        //若state的值在任何时候都取决于props，那么可以使用getDerivedStateFromProps
+        static getDerivedStateFromProps(props,state){
+            console.log('getDerivedStateFromProps')
+            return null
+        }
+
+
+        // 更新之前获取快照，返回值传给componentDidMount
+        getSnapshotBeforeUpdate(){
+            console.log('getSnapshotBeforeUpdate');
+            return ''
+        }
+
+        // 组件挂载完的钩子
+        componentDidMount(prevProps, prevState, snapshot){
+            console.log("Count---componentDidMount",prevProps,prevState,snapshot)
+        }
+
+        // 控制组件更新的“阀门”
+        shouldComponentUpdate(){
+            console.log("Count---shouldComponentUpdate")
+            return true
+        }
+
+
+        // 组件更新完毕的钩子
+        componentDidUpdate(){
+            console.log("Count---componentDidUpdate")
+        }
+
+        // 组件挂载
+        render(){
+            console.log("Count---render")
+            return (
+                <div>
+                    <h1>相加结果：{this.state.count}</h1>
+                    <button onClick={this.add}>点击结果+1</button>
+                </div>
+            )
+        }
+    }
+
+
+
+
+
+    ReactDOM.render(<A/>,document.getElementById("test1"))
+</script>
+</body>
+</html>
